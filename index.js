@@ -13,6 +13,17 @@ app.use(express.json());
 // connect to DB
 connectDB();
 
+// Allow specific origins in production
+const corsOptions = {
+  origin: process.env.NODE_ENV === 'production' 
+    ? ['https://gdg-hack-frontend.vercel.app/', 'http://localhost:3000']
+    : '/',
+  credentials: true,
+  optionsSuccessStatus: 200
+};
+
+app.use(cors(corsOptions));
+
 // API routes
 app.use('/api/auth', authRoutes);
 app.use('/api/game', gameRoutes);
