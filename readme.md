@@ -73,6 +73,3 @@ Ideal for hackathons, game prototypes, or learning backend architecture with aut
 
 ---
 
-## 📄 300-Character Project Description
-
-A Node.js and Express backend for a game platform featuring JWT authentication, world and stage management, boss data, and in-game store APIs. Built with clean architecture, secure routes, and automated tests, ideal for scalable game applications.
